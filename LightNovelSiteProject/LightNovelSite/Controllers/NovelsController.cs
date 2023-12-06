@@ -24,9 +24,9 @@ namespace LightNovelSite.Controllers
         // GET: Novels
         public async Task<IActionResult> Index()
         {
-              return _context.Novels != null ? 
-                          View(await _context.Novels.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Novels'  is null.");
+            return _context.Novels != null ?
+                        View(await _context.Novels.ToListAsync()) :
+                        Problem("Entity set 'ApplicationDbContext.Novels'  is null.");
         }
         //Novels/ShowSearchForm
         public async Task<IActionResult> ShowSearchForm()
@@ -39,7 +39,7 @@ namespace LightNovelSite.Controllers
         public async Task<IActionResult> ShowSearchResults(string SearchTitle)
         {
             return _context.Novels != null ?
-                        View("Index",await _context.Novels.Where(j => j.Title.Contains(SearchTitle) ).ToListAsync()) :
+                        View("Index", await _context.Novels.Where(j => j.Title.Contains(SearchTitle)).ToListAsync()) :
                         Problem("Entity set 'ApplicationDbContext.Novels'  is null.");
         }
 
@@ -72,7 +72,7 @@ namespace LightNovelSite.Controllers
                 .FirstOrDefaultAsync(m => m.Title == id);
             Chapter ch = new Chapter();
             ch.NovelTitle = novels.Title;
-            ch.ChapterCount = novels.Chapters + 1;
+            ch.ChapterNumber = novels.Chapters;
             novels.Chapters++;
             _context.SaveChanges();
             if (novels == null)
@@ -85,7 +85,7 @@ namespace LightNovelSite.Controllers
         [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddChapter([Bind("NovelTitle,ChapterTitle,ChapterCount,Content")] Chapter chapter)
+        public async Task<IActionResult> AddChapter([Bind("NovelTitle,ChapterTitle,ChapterCount,Content,ChapterNumber")] Chapter chapter)
 
         {
             if (ModelState.IsValid)
@@ -97,19 +97,67 @@ namespace LightNovelSite.Controllers
             return View(chapter);
         }
 
-        public async Task<IActionResult> Read(string id )
+        public async Task<IActionResult> Read(string id)
         {
             if (id == null || _context.Novels == null)
             {
                 return NotFound();
             }
-
-            var novels = await _context.Novels.FindAsync(id);
-            if (novels == null)
+            var novel = await _context.Novels.FindAsync(id);
+            var chapters = _context.Chapter.First(item => item.NovelTitle == id && item.ChapterNumber == novel.CurrentChapter);
+            if (chapters == null)
             {
                 return NotFound();
             }
-            return View(novels);
+            return View(chapters);
+        }
+
+        public async Task<IActionResult> Next(string id)
+        {
+            if (id == null || _context.Novels == null)
+            {
+                return NotFound();
+            }
+            var novel = await _context.Novels.FindAsync(id);
+            if (novel.CurrentChapter == novel.Chapters)
+            {
+                return View(Index);
+            }
+            else
+            {
+                var chapters = _context.Chapter.First(item => item.NovelTitle == id && item.ChapterNumber == novel.CurrentChapter + 1);
+                novel.CurrentChapter++;
+                await _context.SaveChangesAsync();
+                if (chapters == null)
+                {
+                    return NotFound();
+                }
+                return View("Read", chapters);
+            }
+        }
+
+        public async Task<IActionResult> Previous(string id)
+        {
+            if (id == null || _context.Novels == null)
+            {
+                return NotFound();
+            }
+            var novel = await _context.Novels.FindAsync(id);
+            if (novel.CurrentChapter == 0)
+            {
+                return View("Index");
+            }
+            else
+            {
+                var chapters = _context.Chapter.First(item => item.NovelTitle == id && item.ChapterNumber == novel.CurrentChapter - 1);
+                novel.CurrentChapter--;
+                await _context.SaveChangesAsync();
+                if (chapters == null)
+                {
+                    return NotFound();
+                }
+                return View("Read", chapters);
+            }
         }
 
         // GET: Novels/Create
@@ -126,10 +174,11 @@ namespace LightNovelSite.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Title,Chapters")] Novels novels)
-        
+
         {
             if (ModelState.IsValid)
             {
+                novels.CurrentChapter = 0;
                 _context.Add(novels);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -224,14 +273,14 @@ namespace LightNovelSite.Controllers
             {
                 _context.Novels.Remove(novels);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool NovelsExists(string id)
         {
-          return (_context.Novels?.Any(e => e.Title == id)).GetValueOrDefault();
+            return (_context.Novels?.Any(e => e.Title == id)).GetValueOrDefault();
         }
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LightNovelSite.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231203202122_ThirdSetup")]
-    partial class ThirdSetup
+    [Migration("20231206181303_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,15 +24,43 @@ namespace LightNovelSite.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("LightNovelSite.Models.Chapter", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ChapterNumber")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ChapterTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NovelTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Chapter");
+                });
+
             modelBuilder.Entity("LightNovelSite.Models.Novels", b =>
                 {
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Chapter")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("Chapters")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CurrentChapter")
                         .HasColumnType("int");
 
                     b.HasKey("Title");

@@ -30,7 +30,7 @@ namespace LightNovelSite.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("ChapterCount")
+                    b.Property<int>("ChapterNumber")
                         .HasColumnType("int");
 
                     b.Property<string>("ChapterTitle")
@@ -55,14 +55,11 @@ namespace LightNovelSite.Data.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("Chapter")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("Chapters")
                         .HasColumnType("int");
 
-                    b.Property<string>("Content")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("CurrentChapter")
+                        .HasColumnType("int");
 
                     b.HasKey("Title");
 

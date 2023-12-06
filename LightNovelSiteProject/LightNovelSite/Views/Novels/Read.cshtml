@@ -1,7 +1,15 @@
-﻿@model LightNovelSite.Models.Novels
+﻿@model LightNovelSite.Models.Chapter
+
 
 
 <p1>
-    @Html.DisplayFor(model => model.Title)
-    @Html.DisplayFor(model => model.Chapter)
+    @Html.DisplayFor(model => model.Id)
 </p1>
+
+<p1>
+    @Html.DisplayFor(model => model.Content)
+</p1>
+
+
+
+<a asp-action="Previous" asp-route-id="@Model.NovelTitle">Previous</a> | <a asp-action="Next" asp-route-id="@Model.NovelTitle">Next</a>
