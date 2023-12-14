@@ -9,6 +9,9 @@ using LightNovelSite.Data;
 using LightNovelSite.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using static System.Collections.Specialized.BitVector32;
+using System.Xml.Linq;
 
 namespace LightNovelSite.Controllers
 {

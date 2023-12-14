@@ -9,77 +9,79 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LightNovelSite
 build_property.RootNamespace = LightNovelSite
-build_property.ProjectDir = C:\Users\dell\Source\Repos\LightNovelSite\LightNovelSiteProject\LightNovelSite\
+build_property.ProjectDir = C:\Users\GRIGS\source\repos\LightNovelSite\LightNovelSiteProject\LightNovelSite\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\dell\Source\Repos\LightNovelSite\LightNovelSiteProject\LightNovelSite
+build_property.MSBuildProjectDirectory = C:\Users\GRIGS\source\repos\LightNovelSite\LightNovelSiteProject\LightNovelSite
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Home/Index.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Home/Privacy.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/AddChapter.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/AddChapter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92ZWxzXEFkZENoYXB0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/Create.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92ZWxzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/Delete.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92ZWxzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/Details.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92ZWxzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/Edit.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92ZWxzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/Index.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92ZWxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/Read.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/Read.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92ZWxzXFJlYWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/ShowSearchForm.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Novels/ShowSearchForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm92ZWxzXFNob3dTZWFyY2hGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Shared/Error.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/_ViewImports.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/_ViewStart.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/dell/Source/Repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Shared/_Layout.cshtml]
+[C:/Users/GRIGS/source/repos/LightNovelSite/LightNovelSiteProject/LightNovelSite/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-gr6ogdo76v
